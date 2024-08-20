@@ -1,0 +1,41 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+  
+    .error-code {
+      font-size: 10rem;
+      font-weight: 700;
+      margin: 0;
+      color: #ff4d4d; // Red color for the error code
+    }
+  
+    .error-message {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 0.5rem 0;
+    }
+  
+    .description {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .home-link {
+      text-decoration: none;
+      color: #007bff; // Blue color for the link
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #0056b3; // Darker blue on hover
+      }
+    }
+  }
+  

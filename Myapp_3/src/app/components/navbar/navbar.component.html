@@ -1,0 +1,21 @@
+<div>
+    <nav>
+      <h2><a routerLink="/">Codingcheff</a></h2>
+      <ul>
+        <li><a routerLink="/codeSnippet" routerLinkActive="active">CodeSnippet</a></li>
+        
+        <!-- Using *ngIf for conditional rendering -->
+        <ng-container *ngIf="authService.isAuthenticated(); else loggedOut">
+          <li (click)="authService.logout()">Logout</li>
+        </ng-container>
+        
+        <ng-template #loggedOut>
+          <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+          <li><a routerLink="/signup" routerLinkActive="active">Signup</a></li>
+        </ng-template>
+        
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      </ul>
+    </nav>
+  </div>
+  

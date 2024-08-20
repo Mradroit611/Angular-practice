@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="split">
+  <main>
+    <ul id="users">
+      <li *ngFor="let user of users; "> 
+        <app-user
+          [user]="user"
+          [selected]="user.id === selectedUserId?.toString()"
+          (toggleTasks)="toggleTasksForUser($event)"
+        ></app-user>
+      </li> 
+    </ul> 
+    <div class="task-space" *ngIf="showTasksForUserId; else noTasks">
+      <app-tasks
+        [selectedUserId]="showTasksForUserId" 
+        [selectedUser]="user_name || ''" 
+        [tasks]="getTasksForUser(showTasksForUserId)"
+        (addTask)="addTaskToUser(showTasksForUserId, $event)"
+        (removeTask)="removeTaskFromUser(showTasksForUserId, $event)"
+        (updateTask)="updateTaskForUser(showTasksForUserId, $event)"
+      ></app-tasks>
+    </div>
+  </main>
+  <ng-template #noTasks></ng-template>
+</div>

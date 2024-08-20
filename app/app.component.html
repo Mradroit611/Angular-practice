@@ -1,0 +1,23 @@
+<body>
+  <app-header />
+  <div class="split">
+<main>
+  <ul id="users">
+    @for (user of users; track user.id) {
+      <li>
+      <app-user
+        [user]="user"
+        [selected]="user.id === selectedUserId"
+        (toggleTasks)="toggleTasksForUser($event)"
+        />
+      </li>
+    }
+  </ul> 
+</main>
+<div class="task-space" *ngIf="showTasksForUserId; else noTasks">
+  <app-tasks></app-tasks>
+</div>
+<ng-template #noTasks>
+  </ng-template>
+</div>
+</body>

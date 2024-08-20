@@ -1,0 +1,22 @@
+<div class="main">
+    <!-- Display the selected user for clarity -->
+    <h1>User: {{ selectedUser }}</h1>
+  
+    <!-- Input fields for task name and description -->
+    <input [(ngModel)]="taskName" type="text" placeholder="Enter task name">
+    <input [(ngModel)]="taskDescription" type="text" placeholder="Enter task description">
+    <br><br>
+    
+    <!-- Add or update button based on editing state -->
+    <button (click)="onAddOrUpdateTask()">{{ editTaskId !== undefined ? 'Update Task' : 'Add Task' }}</button>
+    
+    <!-- Task list with remove and edit buttons -->
+    <ul>
+      <li *ngFor="let item of tasks">
+        {{ item.name }} - {{ item.description }}
+        <button (click)="onEditTask(item)">Update</button>
+        <button (click)="onRemoveTask(item.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

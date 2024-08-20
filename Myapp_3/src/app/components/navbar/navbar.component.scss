@@ -1,0 +1,49 @@
+// SCSS code for a black and white themed navbar
+nav {
+    background-color: #000; // Black background for the navbar
+    color: #fff; // White text color for contrast
+    padding: 0.8rem 2rem; // Padding for spacing
+    display: flex; // Use flexbox for layout
+    justify-content: space-between; // Space between heading and links
+    align-items: center; // Vertically center items
+  
+    h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      a {
+        color: #fff; // White color for the heading link
+        text-decoration: none;
+        transition: color 0.3s;
+        &:hover {
+          color: #ccc; // Light grey color on hover
+        }
+      }
+    }
+  
+    ul {
+      list-style: none; // Remove default list styling
+      padding: 0;
+      margin: 0;
+      display: flex; // Arrange list items horizontally
+      gap: 1.5rem; // Space between list items
+  
+      li {
+        a {
+          color: #fff; // White text color for the links
+          text-decoration: none;
+          font-size: 1rem;
+          padding: 0.5rem 0.8rem; // Padding around the links
+          border-radius: 4px; // Rounded corners
+          transition: background-color 0.3s, color 0.3s;
+  
+          &:hover,
+          &.active {
+            background-color: #444; // Dark grey background on hover and active
+            color: #fff; // White text color on hover and active
+          }
+        }
+      }
+    }
+  }
+  

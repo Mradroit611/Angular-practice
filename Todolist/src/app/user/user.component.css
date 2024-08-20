@@ -1,0 +1,46 @@
+button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #000000;
+  color: #e0d7f3;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  min-width: 12rem;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover,
+button:active,
+.active {
+  background-color: #7c56a0;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+img {
+  width: 2.5rem;
+  height: 2.5rem;
+  /* Ensure uniform height */
+  object-fit: cover;
+  /* Cover for better alignment with the container */
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  /* Slightly bolder font for better readability */
+  color: inherit;
+  /* Ensure color inheritance for consistency */
+}

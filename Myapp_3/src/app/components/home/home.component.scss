@@ -1,0 +1,52 @@
+// list-items.component.scss
+
+// Container for the list
+.list-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff; // White background for the container
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  
+    // Styling the unordered list
+    .item-list {
+      list-style-type: none; // Remove default bullets
+      padding: 0;
+      margin: 0;
+  
+      // Styling each list item
+      li {
+        padding: 10px 0;
+        border-bottom: 1px solid #e0e0e0; // Light gray border between items
+        font-size: 16px;
+        color: #000000; // Black color for text
+  
+        // Last item styling
+        &:last-child {
+          border-bottom: none; // Remove border from the last item
+        }
+      }
+  
+      // Styling for the no data message
+      .no-data {
+        text-align: center;
+        color: #888888; // Light gray color for no data message
+        font-size: 18px;
+        padding: 20px;
+      }
+  
+      // Styling for the list item links
+      .item-link {
+        text-decoration: none; // Remove default underline
+        color: #000000; // Black color for links
+        font-weight: bold; // Bold text for links
+        display: block; // Make the link fill the list item
+  
+        &:hover {
+          text-decoration: underline; // Underline on hover for better accessibility
+        }
+      }
+    }
+  }
+  

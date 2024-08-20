@@ -1,0 +1,13 @@
+<div class="list-container">
+    <ul class="item-list">
+      <ng-container *ngIf="items.length === 0; else itemList">
+        <li class="no-data">No data available</li>
+      </ng-container>
+      <ng-template #itemList>
+        <li *ngFor="let item of items; trackBy: trackById">
+          <a [routerLink]="['/snippet', item.id]" class="item-link">{{ item.title }}</a>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+  

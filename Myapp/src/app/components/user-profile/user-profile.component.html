@@ -1,0 +1,31 @@
+<p>user-profile works!</p>
+<h1>Hello Angular!</h1>
+
+<h4>Name: {{name}} <br> Gender: {{gender}} <br> Salary: {{salary}}</h4>
+<button [disabled] = "isBtnDisabled" >Click</button> 
+
+<h2>Enter your name: {{inputVal}}</h2>
+<!-- <input type="text" [value]="inputVal" (input)="onChange($event)"> Two way data binding -->
+<input type="text" [(ngModel)] = "inputVal">  <!-- another way Two way data binding -->
+
+<div>
+  @for(user of users;track user.name){ <!-- here name should be a unique name like we use ID in API -->
+    @if(user.salary > 10000){
+    <h4>Name - {{user.name}}, Status - {{user.isSingle?"single":"coder"}}, Salary - {{user.salary}}</h4>
+    }
+    @else{
+    <h4>Name - {{user.name}}, Status - {{user.isSingle?"single":"coder"}}, Salary - hidden</h4>
+    }
+  }
+</div>
+<hr>
+<div *ngFor = "let user of users">
+  <h4 *ngIf="user.salary > 10000; else elseBlock">Name - {{user.name}}, Status - {{user.isSingle?"single":"coder"}}, Salary - {{user.salary}}</h4>
+  <ng-template #elseBlock>
+    <h4>Name - {{user.name}}, Status - {{user.isSingle?"single":"coder"}}, Salary - hidden</h4>
+  </ng-template>
+</div>
+
+<h1>{{mem}} {{salarry}}</h1>
+<!-- <p appHighlight>This text should be highlighted if the condition is met.</p> -->
+
